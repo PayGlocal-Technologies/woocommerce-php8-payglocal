@@ -1,0 +1,1 @@
+# woocommerce-php8-payglocal
