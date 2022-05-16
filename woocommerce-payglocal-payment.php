@@ -406,6 +406,7 @@ function wc_payglocal_payment_gateway_init()
 
         public function check_payglocal_payment_response()
         {
+            WC()->session->set_customer_session_cookie(true);
             $response = $_POST;
             if (isset($response['x-gl-token']) && array_key_exists('x-gl-token', $response)) {
                 $payment = $this->verifyPayGlSPayment($response['x-gl-token']);
